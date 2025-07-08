@@ -179,44 +179,46 @@ export default function Home() {
               modal
               nested
             >
-              {(close: () => void) => (
-                <>
-                  <div className="modal bg-gray-800 p-6 rounded-lg text-gray-100 font-playfair">
-                    <h3 className="text-xl font-cinzel text-yellow-500 mb-4">
-                      Bem-vindo à Família!
-                    </h3>
-                    <p className="mb-4">
-                      Clica no link abaixo para te juntares ao grupo de WhatsApp
-                      dos padrinhos:
-                    </p>
-                    <div className="mt-6 flex justify-center gap-4">
-                      <button
-                        onClick={() =>
-                          window.open(
-                            "https://chat.whatsapp.com/G1w9R3ZU3qi9oWkx34n0jB",
-                            "_blank",
-                            "noopener,noreferrer"
-                          )
-                        }
-                        className="flex items-center justify-center bg-green-600 hover:bg-green-500 p-2 rounded"
-                      >
-                        <Image
-                          src="/whatsapp.png"
-                          alt="WhatsApp"
-                          width={32}
-                          height={32}
-                        />
-                      </button>
-                      <button
-                        onClick={close}
-                        className="bg-red-700 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
-                      >
-                        Fechar
-                      </button>
+              {
+                ((close: () => void) => (
+                  <>
+                    <div className="modal bg-gray-800 p-6 rounded-lg text-gray-100 font-playfair">
+                      <h3 className="text-xl font-cinzel text-yellow-500 mb-4">
+                        Bem-vindo à Família!
+                      </h3>
+                      <p className="mb-4">
+                        Clica no link abaixo para te juntares ao grupo de
+                        WhatsApp dos padrinhos:
+                      </p>
+                      <div className="mt-6 flex justify-center gap-4">
+                        <button
+                          onClick={() =>
+                            window.open(
+                              "https://chat.whatsapp.com/G1w9R3ZU3qi9oWkx34n0jB",
+                              "_blank",
+                              "noopener,noreferrer"
+                            )
+                          }
+                          className="flex items-center justify-center bg-green-600 hover:bg-green-500 p-2 rounded"
+                        >
+                          <Image
+                            src="/whatsapp.png"
+                            alt="WhatsApp"
+                            width={32}
+                            height={32}
+                          />
+                        </button>
+                        <button
+                          onClick={close}
+                          className="bg-red-700 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+                        >
+                          Fechar
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                </>
-              )}
+                  </>
+                )) as any
+              }
             </Popup>
           </div>
         </section>
